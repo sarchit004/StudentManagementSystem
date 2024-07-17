@@ -1,0 +1,24 @@
+.mainBackground {
+    -fx-background-color:  #fffdfa;
+}
+
+.textfields {
+    -fx-background-radius: 6px;
+}
+.passwordfields {
+    -fx-background-radius: 6px;
+}
+
+.inactiveBtns {
+    -fx-background-color: #EDEDED;
+    -fx-text-fill: #000;
+    -fx-background-radius: 25px;
+    -fx-cursor: hand;
+}
+
+.activeBtns {
+    -fx-background-color: #000;
+    -fx-text-fill: #fff;
+    -fx-background-radius: 25px;
+    -fx-cursor: hand;
+}

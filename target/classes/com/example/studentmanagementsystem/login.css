@@ -1,0 +1,10 @@
+.loginBtn {
+    -fx-background-color: #000;
+    -fx-text-fill: #fff;
+    -fx-background-radius: 25px;
+    -fx-cursor: hand;
+}
+
+.text&passwordFields {
+    -fx-background-radius: 12px;
+}

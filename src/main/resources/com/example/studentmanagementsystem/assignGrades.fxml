@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550.0" prefWidth="800.0" styleClass="mainBackground" stylesheets="@defaultStyles.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studentmanagementsystem.AssignGrades">
+   <children>
+      <ImageView fitHeight="50.0" fitWidth="640.0" layoutX="736.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Images/profileDP.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="646.0" layoutY="25.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="71.0" styleClass="activeBtns" text="Logout" />
+      <Label layoutX="78.0" layoutY="25.0" text="Assign Grades">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="78.0" layoutY="70.0" text="Hi! Welcome Back Teacher," />
+      <Label layoutX="237.0" layoutY="70.0" text="{USER}" />
+      <Button layoutX="78.0" layoutY="109.0" mnemonicParsing="false" onAction="#clickDashboard" styleClass="inactiveBtns" text="Dashboard">
+         <padding>
+            <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+         </padding>
+      </Button>
+      <Button layoutX="172.0" layoutY="109.0" mnemonicParsing="false" styleClass="activeBtns" text="Assign Grades">
+         <padding>
+            <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+         </padding>
+      </Button>
+      <Button layoutX="284.0" layoutY="109.0" mnemonicParsing="false" onAction="#clickECAformResponse" styleClass="inactiveBtns" text="ECA Form Response">
+         <padding>
+            <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+         </padding>
+      </Button>
+      <Button layoutX="428.0" layoutY="109.0" mnemonicParsing="false" onAction="#clickReplyIssues" styleClass="inactiveBtns" text="Reply Issues">
+         <padding>
+            <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+         </padding>
+      </Button>
+      <Label layoutX="78.0" layoutY="155.0" text="Student ID" />
+      <TextField layoutX="78.0" layoutY="183.0" prefHeight="30.0" prefWidth="199.0" promptText="Enter Student ID" styleClass="textfields" />
+      <TextField layoutX="78.0" layoutY="252.0" prefHeight="30.0" prefWidth="199.0" promptText="Enter Course ID" styleClass="textfields" />
+      <Label layoutX="78.0" layoutY="225.0" text="Course ID" />
+      <TextField layoutX="286.0" layoutY="183.0" prefHeight="30.0" prefWidth="199.0" promptText="Enter Course title" styleClass="textfields" />
+      <Label layoutX="287.0" layoutY="155.0" text="Course Title" />
+      <Label layoutX="287.0" layoutY="225.0" text="Assign Grade:" />
+      <TextArea layoutX="505.0" layoutY="160.0" prefHeight="130.0" prefWidth="212.0" promptText="Enter Comments or Remarks........" styleClass="textfields" />
+      <TableView layoutX="78.0" layoutY="309.0" prefHeight="200.0" prefWidth="640.0">
+        <columns>
+          <TableColumn minWidth="128.0" prefWidth="75.0" text="Student ID" />
+          <TableColumn minWidth="128.0" prefWidth="75.0" text="Course ID" />
+            <TableColumn minWidth="128.0" prefWidth="75.0" text="CourseTitle" />
+            <TableColumn minWidth="128.0" prefWidth="75.0" text="Grades" />
+            <TableColumn minWidth="128.0" prefWidth="75.0" text="Comments" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="assignGrade" layoutX="286.0" layoutY="252.0" prefHeight="30.0" prefWidth="199.0" />
+      <Button layoutX="646.0" layoutY="110.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="71.0" styleClass="activeBtns" text="Submit" />
+   </children>
+</AnchorPane>
