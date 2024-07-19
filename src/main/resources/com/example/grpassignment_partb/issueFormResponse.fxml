@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane prefHeight="550.0" prefWidth="800.0" stylesheets="@defaultStyles.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grpassignment_partb.IssueFormResponse">
+   <children>
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="731.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Images/profileDP.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="641.0" layoutY="26.0" mnemonicParsing="false" onAction="#clickLogout" prefHeight="27.0" prefWidth="71.0" styleClass="activeBtns" stylesheets="@adminDashboard.css" text="Logout" />
+      <Label layoutX="77.0" layoutY="33.0" text="Issue Form Response">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Button layoutX="80.0" layoutY="103.0" mnemonicParsing="false" onAction="#clickDashboard" styleClass="inactiveBtns" text="Dashboard">
+         <padding>
+            <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+         </padding>
+      </Button>
+      <Button layoutX="170.0" layoutY="103.0" mnemonicParsing="false" onAction="#clickViewGrades" styleClass="inactiveBtns" text="View Grades">
+         <padding>
+            <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+         </padding>
+      </Button>
+      <Button layoutX="270.0" layoutY="103.0" mnemonicParsing="false" onAction="#clickStudentIssueForm" styleClass="inactiveBtns" text="Issue Form">
+         <padding>
+            <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+         </padding>
+      </Button>
+      <Button layoutX="360.0" layoutY="102.0" mnemonicParsing="false" onAction="#clickEcaForm" styleClass="inactiveBtns" text="ECA Form">
+         <padding>
+            <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+         </padding>
+      </Button>
+      <Button layoutX="443.0" layoutY="102.0" mnemonicParsing="false" onAction="#clickMcqQuiz" styleClass="inactiveBtns" text="MCQ Quiz">
+         <padding>
+            <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+         </padding>
+      </Button>
+      <Button layoutX="529.0" layoutY="101.0" mnemonicParsing="false" onAction="#clickFeedback" styleClass="inactiveBtns" text="Feedback Form">
+         <padding>
+            <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+         </padding>
+      </Button>
+      <Button layoutX="536.0" layoutY="27.0" mnemonicParsing="false" onAction="#clickUpdateStudent" styleClass="inactiveBtns" text="Update Profile">
+         <padding>
+            <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+         </padding>
+      </Button>
+      <Label layoutX="85.0" layoutY="257.0" text="Issue Description">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextArea layoutX="85.0" layoutY="287.0" prefHeight="106.0" prefWidth="372.0" />
+      <Button layoutX="642.0" layoutY="100.0" mnemonicParsing="false" styleClass="activeBtns" text="Issue Form Response">
+         <padding>
+            <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+         </padding>
+      </Button>
+      <Label layoutX="94.0" layoutY="117.0">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Line endX="100.0" layoutX="185.0" layoutY="149.0" startX="-100.0" stroke="#00000049" />
+      <Label layoutX="85.0" layoutY="153.0" text="Student ID" textFill="#00000083" />
+      <Label layoutX="85.0" layoutY="171.0" text="123456" />
+      <Line endX="100.0" layoutX="185.0" layoutY="196.0" startX="-100.0" stroke="#00000049" />
+      <Label layoutX="85.0" layoutY="199.0" text="Issue Id" textFill="#00000083" />
+      <Label layoutX="85.0" layoutY="219.0" text="11" />
+      <Line endX="100.0" layoutX="185.0" layoutY="245.0" startX="-100.0" stroke="#00000049" />
+      <Line endX="100.0" layoutX="435.0" layoutY="148.0" startX="-100.0" stroke="#00000049" />
+      <Label layoutX="335.0" layoutY="152.0" text="Name" textFill="#00000083" />
+      <Label layoutX="335.0" layoutY="171.0" text="Sarash Chitrakar" />
+      <Line endX="100.0" layoutX="435.0" layoutY="196.0" startX="-100.0" stroke="#00000049" />
+      <Label layoutX="335.0" layoutY="201.0" text="Reported Date" textFill="#00000083" />
+      <Label layoutX="335.0" layoutY="220.0" text="DD/MM/YYYY" />
+      <Line endX="100.0" layoutX="435.0" layoutY="247.0" startX="-100.0" stroke="#00000049" />
+      <Label layoutX="86.0" layoutY="399.0" text="Teacher Response">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextArea layoutX="86.0" layoutY="429.0" prefHeight="106.0" prefWidth="372.0" />
+      <Button layoutX="506.0" layoutY="492.0" mnemonicParsing="false" styleClass="activeBtns" text="Close">
+         <padding>
+            <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+         </padding>
+      </Button>
+      <TextFlow layoutX="320.0" layoutY="303.0" prefHeight="106.0" prefWidth="372.0" />
+   </children>
+</AnchorPane>

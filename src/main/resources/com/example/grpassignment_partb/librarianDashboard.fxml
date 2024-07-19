@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550.0" prefWidth="800.0" styleClass="mainBackground" stylesheets="@defaultStyles.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grpassignment_partb.LibrarianDashboard">
+   <children>
+      <ImageView fitHeight="50.0" fitWidth="640.0" layoutX="736.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Images/profileDP.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="646.0" layoutY="25.0" mnemonicParsing="false" onAction="#clickLogout" prefHeight="27.0" prefWidth="71.0" styleClass="activeBtns" text="Logout" />
+      <Label layoutX="78.0" layoutY="25.0" text="Librarian's Dashboard">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="78.0" layoutY="70.0" text="Hi! Welcome Back Librarian," />
+      <Label layoutX="242.0" layoutY="70.0" text="{USER}" />
+      <Button layoutX="78.0" layoutY="109.0" mnemonicParsing="false" styleClass="activeBtns" text="Dashboard">
+         <padding>
+            <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+         </padding>
+      </Button>
+      <Button layoutX="169.0" layoutY="109.0" mnemonicParsing="false" onAction="#clickManageStudents" styleClass="inactiveBtns" text="Manage Library">
+         <padding>
+            <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+         </padding>
+      </Button>
+      <Label layoutX="79.0" layoutY="159.0" text="Profile Information" />
+      <Line endX="100.0" layoutX="179.0" layoutY="196.0" startX="-100.0" stroke="#00000049" />
+      <Label layoutX="79.0" layoutY="209.0" text="Staff ID" textFill="#00000083" />
+      <Label layoutX="79.0" layoutY="228.0" text="123456" />
+      <Line endX="100.0" layoutX="179.0" layoutY="261.0" startX="-100.0" stroke="#00000049" />
+      <Label layoutX="79.0" layoutY="276.0" text="Department" textFill="#00000083" />
+      <Label layoutX="79.0" layoutY="295.0" text="Library" />
+      <Line endX="100.0" layoutX="179.0" layoutY="328.0" startX="-100.0" stroke="#00000049" />
+      <Label layoutX="79.0" layoutY="345.0" text="Phone" textFill="#00000083" />
+      <Label layoutX="79.0" layoutY="364.0" text="987-510-78" />
+      <Line endX="100.0" layoutX="179.0" layoutY="397.0" startX="-100.0" stroke="#00000049" />
+      <Line endX="100.0" layoutX="429.0" layoutY="193.0" startX="-100.0" stroke="#00000049" />
+      <Label layoutX="329.0" layoutY="210.0" text="Name" textFill="#00000083" />
+      <Label layoutX="329.0" layoutY="229.0" text="Sarash Chitrakar" />
+      <Line endX="100.0" layoutX="429.0" layoutY="262.0" startX="-100.0" stroke="#00000049" />
+      <Label layoutX="329.0" layoutY="278.0" text="Email" textFill="#00000083" />
+      <Label layoutX="329.0" layoutY="297.0" text="sarash123@gmail.com" />
+      <Line endX="100.0" layoutX="429.0" layoutY="330.0" startX="-100.0" stroke="#00000049" />
+      <ImageView fitHeight="122.0" fitWidth="591.0" layoutX="74.0" layoutY="414.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Images/AdmissionOfficerBanner.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

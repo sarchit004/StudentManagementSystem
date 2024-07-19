@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550.0" prefWidth="800.0" styleClass="mainBackground" stylesheets="@defaultStyles.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grpassignment_partb.AddTeachers">
+   <children>
+      <ImageView fitHeight="500.0" fitWidth="299.0" layoutX="473.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Images/addTeachersBanner.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="63.0" layoutY="25.0" text="Add Teachers">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="63.0" layoutY="76.0" text="First Name" />
+      <Label layoutX="232.0" layoutY="76.0" text="Last Name" />
+      <TextField layoutX="63.0" layoutY="102.0" prefHeight="30.0" prefWidth="161.0" promptText="Enter first name" styleClass="textfields" />
+      <ComboBox layoutX="63.0" layoutY="143.0" prefHeight="30.0" prefWidth="161.0" promptText="Select Faculty" />
+      <Label layoutX="62.0" layoutY="184.0" text="Phone Number" />
+      <Label layoutX="63.0" layoutY="280.0" text="Email" />
+      <TextField layoutX="232.0" layoutY="102.0" prefHeight="30.0" prefWidth="161.0" promptText="Enter last name" styleClass="textfields" />
+      <TextField layoutX="63.0" layoutY="213.0" prefHeight="30.0" prefWidth="338.0" promptText="Enter your Phone number" styleClass="textfields" />
+      <TextField layoutX="63.0" layoutY="305.0" prefHeight="30.0" prefWidth="338.0" promptText="Enter email" styleClass="textfields" />
+      <Label layoutX="63.0" layoutY="345.0" text="Password" />
+      <Label layoutX="64.0" layoutY="411.0" text="Confirm Password" />
+      <PasswordField layoutX="63.0" layoutY="371.0" prefHeight="30.0" prefWidth="338.0" promptText="Enter password" styleClass="passwordfields" />
+      <PasswordField layoutX="63.0" layoutY="438.0" prefHeight="30.0" prefWidth="338.0" promptText="Confirm password" styleClass="passwordfields" />
+      <Button layoutX="232.0" layoutY="487.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="161.0" styleClass="activeBtns" text="Add" />
+      <ComboBox layoutX="232.0" layoutY="143.0" prefHeight="30.0" prefWidth="161.0" promptText="Select Role" />
+      <Label layoutX="63.0" layoutY="254.0" text="Gender:" />
+      <CheckBox layoutX="138.0" layoutY="254.0" mnemonicParsing="false" text="Male" />
+      <CheckBox layoutX="205.0" layoutY="254.0" mnemonicParsing="false" text="Female" />
+      <CheckBox layoutX="283.0" layoutY="254.0" mnemonicParsing="false" text="Others" />
+      <Button layoutX="63.0" layoutY="487.0" mnemonicParsing="false" onAction="#clickCancel" prefHeight="27.0" prefWidth="161.0" styleClass="inactiveBtns" text="Cancel" />
+   </children>
+</AnchorPane>
