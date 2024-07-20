@@ -5,6 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
@@ -12,8 +13,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import static com.example.grpassignment_partb.Uses.changeScene;
-import static com.example.grpassignment_partb.Uses.saveDatatoCSV;
+import static com.example.grpassignment_partb.Uses.*;
 
 public class AddAdmin implements Initializable {
     @FXML
@@ -30,6 +30,8 @@ public class AddAdmin implements Initializable {
     private PasswordField passwordBox;
     @FXML
     private PasswordField confirmPasswordBox;
+    @FXML
+    private Label errorLabel;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -46,10 +48,17 @@ public class AddAdmin implements Initializable {
         String password = passwordBox.getText();
         String confirmPassword = confirmPasswordBox.getText();
 
+        errorLabelVisibility(errorLabel, false);
+
         String fullName = firstName + " "+ lastName;
 
-        String[] values = {fullName, gender, phoneNumber, email, password, confirmPassword};
-        saveDatatoCSV("adminData.csv", values);
+        if (firstName.isEmpty() || lastName.isEmpty() || gender.isEmpty() || phoneNumber.isEmpty() || email.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()){
+            error(errorLabel, "All above fields are required!!");
+        } else {
+            String[] values = {fullName, gender, phoneNumber, email, password, confirmPassword};
+            saveDatatoCSV("adminData.csv", values);
+            success(errorLabel, "Added Successfully!!");
+        }
     }
     @FXML
     public void clickCancel(ActionEvent event) throws IOException {

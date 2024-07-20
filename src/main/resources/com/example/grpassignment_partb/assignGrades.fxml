@@ -49,13 +49,13 @@
          </padding>
       </Button>
       <Label layoutX="78.0" layoutY="155.0" text="Student ID" />
-      <TextField layoutX="78.0" layoutY="183.0" prefHeight="30.0" prefWidth="199.0" promptText="Enter Student ID" styleClass="textfields" />
-      <TextField layoutX="78.0" layoutY="252.0" prefHeight="30.0" prefWidth="199.0" promptText="Enter Course ID" styleClass="textfields" />
+      <TextField fx:id="studentIdBox" layoutX="78.0" layoutY="183.0" prefHeight="30.0" prefWidth="199.0" promptText="Enter Student ID" styleClass="textfields" />
+      <TextField fx:id="courseIdBox" layoutX="78.0" layoutY="252.0" prefHeight="30.0" prefWidth="199.0" promptText="Enter Course ID" styleClass="textfields" />
       <Label layoutX="78.0" layoutY="225.0" text="Course ID" />
-      <TextField layoutX="286.0" layoutY="183.0" prefHeight="30.0" prefWidth="199.0" promptText="Enter Course title" styleClass="textfields" />
+      <TextField fx:id="courseTitleBox" layoutX="286.0" layoutY="183.0" prefHeight="30.0" prefWidth="199.0" promptText="Enter Course title" styleClass="textfields" />
       <Label layoutX="287.0" layoutY="155.0" text="Course Title" />
       <Label layoutX="287.0" layoutY="225.0" text="Assign Grade:" />
-      <TextArea layoutX="505.0" layoutY="160.0" prefHeight="130.0" prefWidth="212.0" promptText="Enter Comments or Remarks........" styleClass="textfields" />
+      <TextArea fx:id="commentsBox" layoutX="505.0" layoutY="160.0" prefHeight="130.0" prefWidth="212.0" promptText="Enter Comments or Remarks........" styleClass="textfields" />
       <TableView layoutX="78.0" layoutY="309.0" prefHeight="200.0" prefWidth="640.0">
         <columns>
           <TableColumn minWidth="128.0" prefWidth="75.0" text="Student ID" />
@@ -66,6 +66,6 @@
         </columns>
       </TableView>
       <ComboBox fx:id="assignGrade" layoutX="286.0" layoutY="252.0" prefHeight="30.0" prefWidth="199.0" />
-      <Button layoutX="646.0" layoutY="110.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="71.0" styleClass="activeBtns" text="Submit" />
+      <Button layoutX="646.0" layoutY="110.0" mnemonicParsing="false" onAction="#clickSubmit" prefHeight="27.0" prefWidth="71.0" styleClass="activeBtns" text="Submit" />
    </children>
 </AnchorPane>

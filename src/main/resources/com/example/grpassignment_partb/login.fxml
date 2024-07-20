@@ -29,14 +29,14 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <TextField fx:id="email" layoutX="44.0" layoutY="153.0" prefHeight="27.0" prefWidth="196.0" promptText="Enter your Email" />
-      <PasswordField fx:id="password" layoutX="44.0" layoutY="222.0" prefHeight="27.0" prefWidth="196.0" promptText="Enter your Password" />
+      <TextField fx:id="emailBox" layoutX="44.0" layoutY="153.0" prefHeight="27.0" prefWidth="196.0" promptText="Enter your Email" />
+      <PasswordField fx:id="passwordBox" layoutX="44.0" layoutY="222.0" prefHeight="27.0" prefWidth="196.0" promptText="Enter your Password" />
       <Label layoutX="44.0" layoutY="125.0" text="Email">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <ComboBox fx:id="role" layoutX="44.0" layoutY="285.0" prefHeight="27.0" prefWidth="196.0" promptText="Select your Role">
+      <ComboBox fx:id="roleBox" layoutX="44.0" layoutY="285.0" prefHeight="27.0" prefWidth="196.0" promptText="Select your Role">
       </ComboBox>
       <Label layoutX="46.0" layoutY="257.0" text="Forgot your Password?" textFill="#5b5a5a">
          <font>

@@ -2,13 +2,12 @@ package com.example.grpassignment_partb;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.text.Text;
 
 import java.io.IOException;
 
-import static com.example.grpassignment_partb.Uses.changeScene;
-import static com.example.grpassignment_partb.Uses.saveDatatoCSV;
+import static com.example.grpassignment_partb.Uses.*;
 
 public class AddBooks {
     @FXML
@@ -17,6 +16,8 @@ public class AddBooks {
     private TextField bookTitleBox;
     @FXML
     private TextField bookAuthorBox;
+    @FXML
+    private Label messageLabel;
 
     @FXML
     public void clickAdd(ActionEvent event) throws IOException {
@@ -24,8 +25,15 @@ public class AddBooks {
         String bookTitle = bookTitleBox.getText();
         String bookAuthor = bookAuthorBox.getText();
 
-        String[] values = {bookID, bookTitle, bookAuthor};
-        saveDatatoCSV("bookData.csv", values);
+        errorLabelVisibility(messageLabel, false);
+
+        if (bookID.isEmpty() || bookTitle.isEmpty() || bookAuthor.isEmpty()){
+            error(messageLabel, "All above fields are requrired");
+        } else {
+            String[] values = {bookID, bookTitle, bookAuthor};
+            saveDatatoCSV("bookData.csv", values);
+            success(messageLabel, "Added Succesfully!!");
+        }
     }
 
     @FXML

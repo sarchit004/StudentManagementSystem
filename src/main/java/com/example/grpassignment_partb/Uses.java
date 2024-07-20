@@ -1,5 +1,6 @@
 package com.example.grpassignment_partb;
 
+import com.opencsv.CSVReader;
 import com.opencsv.CSVWriter;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -9,11 +10,13 @@ import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.stage.Stage;
 
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Uses {
-
     public static Stage getCurrentStage(ActionEvent event){
         Node node = (Node)event.getSource();
         Stage stage = (Stage)node.getScene().getWindow();
@@ -43,6 +46,11 @@ public class Uses {
         errorLabel.setVisible(true);
         errorLabel.setText(message);
         errorLabel.setStyle("-fx-text-fill: red;");
+    }
+    public static void success(Label successLabel, String message){
+        successLabel.setVisible(true);
+        successLabel.setText(message);
+        successLabel.setStyle("-fx-text-fill: green;");
     }
     public static void errorLabelVisibility(Label errorLabel, boolean value){
         errorLabel.setVisible(value);

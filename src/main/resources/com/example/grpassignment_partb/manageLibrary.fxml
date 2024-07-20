@@ -36,15 +36,20 @@
          </padding>
       </Button>
       <Label layoutX="79.0" layoutY="159.0" text="Book Lists" />
-      <TableView layoutX="78.0" layoutY="200.0" prefHeight="312.0" prefWidth="640.0">
+      <TableView fx:id="tableView" layoutX="78.0" layoutY="200.0" prefHeight="312.0" prefWidth="640.0">
         <columns>
-          <TableColumn minWidth="160.0" prefWidth="75.0" text="Book ID" />
-          <TableColumn minWidth="160.0" prefWidth="75.0" text="Title" />
-            <TableColumn minWidth="160.0" prefWidth="75.0" text="Author" />
-            <TableColumn minWidth="160.0" prefWidth="75.0" text="Actions" />
+          <TableColumn fx:id="column1" minWidth="160.0" prefWidth="75.0" text="Book ID" />
+          <TableColumn fx:id="column2" minWidth="160.0" prefWidth="75.0" text="Title" />
+            <TableColumn fx:id="column3" minWidth="160.0" prefWidth="75.0" text="Author" />
+            <TableColumn fx:id="column4" minWidth="160.0" prefWidth="75.0" text="Actions" />
         </columns>
       </TableView>
       <Button layoutX="608.0" layoutY="154.0" mnemonicParsing="false" onAction="#clickAddStudents" styleClass="inactiveBtns" text="Add new Books">
+         <padding>
+            <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+         </padding>
+      </Button>
+      <Button layoutX="534.0" layoutY="154.0" mnemonicParsing="false" styleClass="inactiveBtns" text="Refresh">
          <padding>
             <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
          </padding>
