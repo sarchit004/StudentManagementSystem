@@ -19,33 +19,34 @@
             <Image url="@../../../Images/addTeachersBanner.png" />
          </image>
       </ImageView>
-      <Label layoutX="63.0" layoutY="25.0" text="Add Teachers">
+      <Label layoutX="62.0" layoutY="14.0" text="Add Teachers">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>
       </Label>
-      <Label layoutX="63.0" layoutY="76.0" text="First Name" />
-      <Label layoutX="232.0" layoutY="76.0" text="Last Name" />
-      <TextField fx:id="firstNameBox" layoutX="63.0" layoutY="102.0" prefHeight="30.0" prefWidth="161.0" promptText="Enter first name" styleClass="textfields" />
-      <ComboBox fx:id="selectFaculty" layoutX="63.0" layoutY="143.0" prefHeight="30.0" prefWidth="338.0" promptText="Select Faculty" />
-      <Label layoutX="62.0" layoutY="184.0" text="Phone Number" />
-      <Label layoutX="63.0" layoutY="280.0" text="Email" />
-      <TextField fx:id="lastNameBox" layoutX="232.0" layoutY="102.0" prefHeight="30.0" prefWidth="161.0" promptText="Enter last name" styleClass="textfields" />
-      <TextField fx:id="phoneNumberBox" layoutX="63.0" layoutY="213.0" prefHeight="30.0" prefWidth="338.0" promptText="Enter your Phone number" styleClass="textfields" />
-      <TextField fx:id="emailBox" layoutX="63.0" layoutY="305.0" prefHeight="30.0" prefWidth="338.0" promptText="Enter email" styleClass="textfields" />
-      <Label layoutX="63.0" layoutY="345.0" text="Password" />
-      <Label layoutX="64.0" layoutY="411.0" text="Confirm Password" />
-      <PasswordField fx:id="passwordBox" layoutX="63.0" layoutY="371.0" prefHeight="30.0" prefWidth="338.0" promptText="Enter password" styleClass="passwordfields" />
-      <PasswordField fx:id="confirmPasswordBox" layoutX="63.0" layoutY="438.0" prefHeight="30.0" prefWidth="338.0" promptText="Confirm password" styleClass="passwordfields" />
-      <Button layoutX="232.0" layoutY="487.0" mnemonicParsing="false" onAction="#clickAdd" prefHeight="27.0" prefWidth="161.0" styleClass="activeBtns" text="Add" />
-      <Label layoutX="63.0" layoutY="254.0" text="Gender:" />
-      <Button layoutX="63.0" layoutY="487.0" mnemonicParsing="false" onAction="#clickCancel" prefHeight="27.0" prefWidth="161.0" styleClass="inactiveBtns" text="Cancel" />
-      <RadioButton fx:id="maleBtn" layoutX="142.0" layoutY="254.0" mnemonicParsing="false" text="Male">
+      <Label layoutX="63.0" layoutY="56.0" text="First Name" />
+      <Label layoutX="232.0" layoutY="56.0" text="Last Name" />
+      <TextField fx:id="firstNameBox" layoutX="63.0" layoutY="82.0" prefHeight="30.0" prefWidth="161.0" promptText="Enter first name" styleClass="textfields" />
+      <ComboBox fx:id="selectFaculty" layoutX="63.0" layoutY="123.0" prefHeight="30.0" prefWidth="338.0" promptText="Select Faculty" />
+      <Label layoutX="62.0" layoutY="164.0" text="Phone Number" />
+      <Label layoutX="63.0" layoutY="260.0" text="Email" />
+      <TextField fx:id="lastNameBox" layoutX="232.0" layoutY="82.0" prefHeight="30.0" prefWidth="161.0" promptText="Enter last name" styleClass="textfields" />
+      <TextField fx:id="phoneNumberBox" layoutX="63.0" layoutY="193.0" prefHeight="30.0" prefWidth="338.0" promptText="Enter your Phone number" styleClass="textfields" />
+      <TextField fx:id="emailBox" layoutX="63.0" layoutY="285.0" prefHeight="30.0" prefWidth="338.0" promptText="Enter email" styleClass="textfields" />
+      <Label layoutX="63.0" layoutY="325.0" text="Password" />
+      <Label layoutX="64.0" layoutY="391.0" text="Confirm Password" />
+      <PasswordField fx:id="passwordBox" layoutX="63.0" layoutY="351.0" prefHeight="30.0" prefWidth="338.0" promptText="Enter password" styleClass="passwordfields" />
+      <PasswordField fx:id="confirmPasswordBox" layoutX="63.0" layoutY="418.0" prefHeight="30.0" prefWidth="338.0" promptText="Confirm password" styleClass="passwordfields" />
+      <Button layoutX="236.0" layoutY="498.0" mnemonicParsing="false" onAction="#clickAdd" prefHeight="27.0" prefWidth="161.0" styleClass="activeBtns" text="Add" />
+      <Label layoutX="63.0" layoutY="234.0" text="Gender:" />
+      <Button layoutX="67.0" layoutY="498.0" mnemonicParsing="false" onAction="#clickCancel" prefHeight="27.0" prefWidth="161.0" styleClass="inactiveBtns" text="Cancel" />
+      <RadioButton fx:id="maleBtn" layoutX="142.0" layoutY="234.0" mnemonicParsing="false" text="Male">
          <toggleGroup>
             <ToggleGroup fx:id="genderRadioBtns" />
          </toggleGroup>
       </RadioButton>
-      <RadioButton fx:id="femaleBtn" layoutX="217.0" layoutY="254.0" mnemonicParsing="false" text="Female" toggleGroup="$genderRadioBtns" />
-      <RadioButton fx:id="otherBtn" layoutX="299.0" layoutY="254.0" mnemonicParsing="false" text="Others" toggleGroup="$genderRadioBtns" />
+      <RadioButton fx:id="femaleBtn" layoutX="217.0" layoutY="234.0" mnemonicParsing="false" text="Female" toggleGroup="$genderRadioBtns" />
+      <RadioButton fx:id="otherBtn" layoutX="299.0" layoutY="234.0" mnemonicParsing="false" text="Others" toggleGroup="$genderRadioBtns" />
+      <Label fx:id="messageLabel" layoutX="158.0" layoutY="464.0" text="Label" visible="false" />
    </children>
 </AnchorPane>

@@ -25,12 +25,7 @@ public class McqQuiz {
     }
     @FXML
     public void clickStudentIssueForm(ActionEvent event) throws IOException {
-        changeScene(event, "view.studentIssueForm.fxml", "STUDENT MANAGEMENT SYSTEM");
-    }
-
-    @FXML
-    public void clickUpdateStudent(ActionEvent event) throws IOException {
-        changeScene(event, "updateStudent.fxml", "STUDENT MANAGEMENT SYSTEM");
+        changeScene(event, "studentIssueForm.fxml", "STUDENT MANAGEMENT SYSTEM");
     }
     @FXML
     public void clickIssueFormResponse(ActionEvent event) throws IOException {

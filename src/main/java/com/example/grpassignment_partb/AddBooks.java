@@ -30,9 +30,15 @@ public class AddBooks {
         if (bookID.isEmpty() || bookTitle.isEmpty() || bookAuthor.isEmpty()){
             error(messageLabel, "All above fields are requrired");
         } else {
+            String[] headers = {"BookID", "BookTitle", "BookAuthor"};
             String[] values = {bookID, bookTitle, bookAuthor};
-            saveDatatoCSV("bookData.csv", values);
-            success(messageLabel, "Added Succesfully!!");
+
+            try{
+                saveDatatoCSV("bookData.csv", headers, values);
+                success(messageLabel, "Added Succesfully!!");
+            } catch (IOException e){
+                e.printStackTrace();
+            }
         }
     }
 

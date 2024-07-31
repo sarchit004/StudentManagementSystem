@@ -18,10 +18,10 @@ public class TeacherDashboard {
     }
     @FXML
     public void clickECAformResponse(ActionEvent event) throws IOException {
-        changeScene(event, "ecaFormResponse.fxml", "STUDENT MANAGEMENT SYSTEM");
+        changeScene(event, "teacherECAResponses.fxml", "STUDENT MANAGEMENT SYSTEM");
     }
     @FXML
     public void clickReplyIssues(ActionEvent event) throws IOException {
-        changeScene(event, "replyIssues.fxml", "STUDENT MANAGEMENT SYSTEM");
+        changeScene(event, "viewIssues.fxml", "STUDENT MANAGEMENT SYSTEM");
     }
 }

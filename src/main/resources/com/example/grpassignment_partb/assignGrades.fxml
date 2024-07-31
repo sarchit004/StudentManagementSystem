@@ -20,7 +20,7 @@
             <Image url="@../../../Images/profileDP.png" />
          </image>
       </ImageView>
-      <Button layoutX="646.0" layoutY="25.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="71.0" styleClass="activeBtns" text="Logout" />
+      <Button layoutX="646.0" layoutY="25.0" mnemonicParsing="false" onAction="#clickLogout" prefHeight="27.0" prefWidth="71.0" styleClass="activeBtns" text="Logout" />
       <Label layoutX="78.0" layoutY="25.0" text="Assign Grades">
          <font>
             <Font name="System Bold" size="30.0" />
@@ -43,26 +43,26 @@
             <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
          </padding>
       </Button>
-      <Button layoutX="428.0" layoutY="109.0" mnemonicParsing="false" onAction="#clickReplyIssues" styleClass="inactiveBtns" text="Reply Issues">
+      <Button layoutX="428.0" layoutY="109.0" mnemonicParsing="false" onAction="#clickViewIssues" styleClass="inactiveBtns" text="View Issues">
          <padding>
             <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
          </padding>
       </Button>
-      <Label layoutX="78.0" layoutY="155.0" text="Student ID" />
-      <TextField fx:id="studentIdBox" layoutX="78.0" layoutY="183.0" prefHeight="30.0" prefWidth="199.0" promptText="Enter Student ID" styleClass="textfields" />
+      <Label layoutX="78.0" layoutY="155.0" text="Student's Email ID" />
+      <TextField fx:id="studentEmailBox" layoutX="78.0" layoutY="183.0" prefHeight="30.0" prefWidth="199.0" promptText="Enter Student ID" styleClass="textfields" />
       <TextField fx:id="courseIdBox" layoutX="78.0" layoutY="252.0" prefHeight="30.0" prefWidth="199.0" promptText="Enter Course ID" styleClass="textfields" />
       <Label layoutX="78.0" layoutY="225.0" text="Course ID" />
       <TextField fx:id="courseTitleBox" layoutX="286.0" layoutY="183.0" prefHeight="30.0" prefWidth="199.0" promptText="Enter Course title" styleClass="textfields" />
       <Label layoutX="287.0" layoutY="155.0" text="Course Title" />
       <Label layoutX="287.0" layoutY="225.0" text="Assign Grade:" />
       <TextArea fx:id="commentsBox" layoutX="505.0" layoutY="160.0" prefHeight="130.0" prefWidth="212.0" promptText="Enter Comments or Remarks........" styleClass="textfields" />
-      <TableView layoutX="78.0" layoutY="309.0" prefHeight="200.0" prefWidth="640.0">
+      <TableView fx:id="tableView" layoutX="78.0" layoutY="309.0" prefHeight="200.0" prefWidth="640.0">
         <columns>
-          <TableColumn minWidth="128.0" prefWidth="75.0" text="Student ID" />
-          <TableColumn minWidth="128.0" prefWidth="75.0" text="Course ID" />
-            <TableColumn minWidth="128.0" prefWidth="75.0" text="CourseTitle" />
-            <TableColumn minWidth="128.0" prefWidth="75.0" text="Grades" />
-            <TableColumn minWidth="128.0" prefWidth="75.0" text="Comments" />
+          <TableColumn fx:id="studentEmailID" minWidth="128.0" prefWidth="75.0" text="Student's Email" />
+          <TableColumn fx:id="courseID" minWidth="128.0" prefWidth="75.0" text="Course ID" />
+            <TableColumn fx:id="courseTitle" minWidth="128.0" prefWidth="75.0" text="CourseTitle" />
+            <TableColumn fx:id="studentGrade" minWidth="128.0" prefWidth="75.0" text="Grades" />
+            <TableColumn fx:id="comment" minWidth="128.0" prefWidth="75.0" text="Comments" />
         </columns>
       </TableView>
       <ComboBox fx:id="assignGrade" layoutX="286.0" layoutY="252.0" prefHeight="30.0" prefWidth="199.0" />

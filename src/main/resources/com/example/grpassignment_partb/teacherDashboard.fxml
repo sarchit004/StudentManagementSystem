@@ -40,7 +40,7 @@
             <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
          </padding>
       </Button>
-      <Button layoutX="428.0" layoutY="109.0" mnemonicParsing="false" onAction="#clickReplyIssues" styleClass="inactiveBtns" text="Reply Issues">
+      <Button layoutX="428.0" layoutY="109.0" mnemonicParsing="false" onAction="#clickReplyIssues" styleClass="inactiveBtns" text="View Issues">
          <padding>
             <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
          </padding>

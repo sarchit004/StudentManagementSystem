@@ -33,6 +33,8 @@ public class AddStudents implements Initializable {
     private PasswordField passwordBox;
     @FXML
     private PasswordField confirmPasswordBox;
+    @FXML
+    private Label messageLabel;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -50,10 +52,31 @@ public class AddStudents implements Initializable {
         String password = passwordBox.getText();
         String confirmPassword = confirmPasswordBox.getText();
 
-        String fullName = firstName + " " + lastName;
+        errorLabelVisibility(messageLabel, false);
 
-        String[] values = {fullName, faculty, phoneNumber,gender, email, password, confirmPassword};
-        saveDatatoCSV("studentsData.csv", values);
+        String fullName = firstName + " " + lastName;
+        String encryptedPassword;
+
+        if (firstNameBox.getText().isEmpty() || lastNameBox.getText().isEmpty() || selectFacultyBox.getValue() == null || phoneNumberBox.getText().isEmpty() || gender == null || emailBox.getText().isEmpty() || passwordBox.getText().isEmpty() || confirmPasswordBox.getText().isEmpty()) {
+            error(messageLabel, "All above fields are required!!");
+        } else if (!password.equals(confirmPassword)) {
+            error(messageLabel, "Passwords don't match!!");
+        } else if (!isEmailUnique(email, "studentsData.csv", 4)) { // 4 is the email column index in studentsData.csv
+            error(messageLabel, "Email already exists!!");
+        } else if (password.length() < 6) {
+            error(messageLabel, "Password must contain atleast 6 characters!!");
+        } else {
+            encryptedPassword = encryptPassword(password);
+            String[] headers = {"FullName", "Faculty", "PhoneNumber", "Gender", "Email", "Password"};
+            String[] values = {fullName, faculty, phoneNumber, gender, email, encryptedPassword};
+
+            try {
+                saveDatatoCSV("studentsData.csv", headers, values);
+                success(messageLabel, "Added Successfully!!");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
     @FXML
     public void clickCancel(ActionEvent event) throws IOException {

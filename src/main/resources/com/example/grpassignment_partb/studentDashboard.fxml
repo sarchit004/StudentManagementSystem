@@ -18,7 +18,7 @@
       </ImageView>
       <Button layoutX="646.0" layoutY="26.0" mnemonicParsing="false" onAction="#clickLogout" prefHeight="27.0" prefWidth="71.0" styleClass="activeBtns" stylesheets="defaultStyles.css" text="Logout" />
 
-      <Label layoutX="91.0" layoutY="32.0" text="Student Dashboard">
+      <Label layoutX="87.0" layoutY="26.0" text="Student Dashboard">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>
@@ -50,12 +50,12 @@
             <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
          </padding>
       </Button>
-      <Button layoutX="539.0" layoutY="109.0" mnemonicParsing="false" onAction="#clickFeedback" styleClass="inactiveBtns" text="Feedback Form">
+      <Button layoutX="295.0" layoutY="304.0" mnemonicParsing="false" onAction="#clickFeedback" styleClass="inactiveBtns" text="Feedback Form">
          <padding>
             <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
          </padding>
       </Button>
-      <Button layoutX="651.0" layoutY="108.0" mnemonicParsing="false" onAction="#clickIssueFormResponse" styleClass="inactiveBtns" text="Issue Form Response">
+      <Button layoutX="409.0" layoutY="304.0" mnemonicParsing="false" onAction="#clickIssueFormResponse" styleClass="inactiveBtns" text="Issue Form Response">
          <padding>
             <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
          </padding>
@@ -76,44 +76,39 @@
       <Line endX="100.0" layoutX="443.0" layoutY="270.0" startX="-100.0" stroke="#00000049" />
       <Label layoutX="93.0" layoutY="149.0" text="Student Information">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font size="12.0" />
          </font>
       </Label>
       <Label layoutX="93.0" layoutY="275.0" text="Phone Number" textFill="#00000083" />
       <Label layoutX="93.0" layoutY="294.0" text="9742993476" />
-      <Label layoutX="90.0" layoutY="325.0" text="Available Course Materials">
+      <Label layoutX="92.0" layoutY="347.0" text="Available Course Materials">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="309.0" layoutY="383.0" mnemonicParsing="false" styleClass="inactiveBtns" text="View" />
+      <Label layoutX="90.0" layoutY="379.0" text="Mathematics 101">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Button layoutX="307.0" layoutY="361.0" mnemonicParsing="false" styleClass="inactiveBtns" text="View" />
-      <Label layoutX="94.0" layoutY="356.0" text="Mathematics 101">
+      <Label layoutX="92.0" layoutY="401.0" text="Proffessor: john Smith" />
+      <Button layoutX="309.0" layoutY="433.0" mnemonicParsing="false" styleClass="inactiveBtns" text="View" />
+      <Label layoutX="91.0" layoutY="424.0" text="Mathematics 101">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="96.0" layoutY="378.0" text="Proffessor: john Smith" />
-      <Button layoutX="307.0" layoutY="411.0" mnemonicParsing="false" styleClass="inactiveBtns" text="View" />
-      <Label layoutX="95.0" layoutY="401.0" text="Mathematics 101">
+      <Label layoutX="93.0" layoutY="446.0" text="Proffessor: john Smith" />
+      <Button layoutX="310.0" layoutY="476.0" mnemonicParsing="false" styleClass="inactiveBtns" text="View" />
+      <Label layoutX="91.0" layoutY="470.0" text="Mathematics 101">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="97.0" layoutY="423.0" text="Proffessor: john Smith" />
-      <Button layoutX="308.0" layoutY="454.0" mnemonicParsing="false" styleClass="inactiveBtns" text="View" />
-      <Label layoutX="95.0" layoutY="447.0" text="Mathematics 101">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="97.0" layoutY="469.0" text="Proffessor: john Smith" />
-      <Line endX="100.0" layoutX="196.0" layoutY="401.0" startX="-100.0" stroke="#00000049" />
-      <Line endX="100.0" layoutX="196.0" layoutY="443.0" startX="-100.0" stroke="#00000049" />
-      <Line endX="100.0" layoutX="198.0" layoutY="490.0" startX="-100.0" stroke="#00000049" />
-      <Button layoutX="540.0" layoutY="27.0" mnemonicParsing="false" onAction="#clickUpdateStudent" styleClass="inactiveBtns" text="Update Profile">
-         <padding>
-            <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
-         </padding>
-      </Button>
+      <Label layoutX="93.0" layoutY="492.0" text="Proffessor: john Smith" />
+      <Line endX="100.0" layoutX="192.0" layoutY="424.0" startX="-100.0" stroke="#00000049" />
+      <Line endX="100.0" layoutX="192.0" layoutY="466.0" startX="-100.0" stroke="#00000049" />
+      <Line endX="100.0" layoutX="194.0" layoutY="513.0" startX="-100.0" stroke="#00000049" />
    </children>
 </AnchorPane>

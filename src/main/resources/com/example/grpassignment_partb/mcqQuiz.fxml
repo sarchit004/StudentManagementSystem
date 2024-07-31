@@ -12,96 +12,93 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="550.0" prefWidth="800.0" stylesheets="@defaultStyles.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grpassignment_partb.McqQuiz">
+<AnchorPane prefHeight="550.0" prefWidth="800.0" styleClass="mainBackground" stylesheets="@defaultStyles.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grpassignment_partb.McqQuiz">
    <children>
-      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="728.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="733.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../Images/profileDP.png" />
          </image>
       </ImageView>
-      <Button layoutX="648.0" layoutY="22.0" mnemonicParsing="false" onAction="#clickLogout" prefHeight="27.0" prefWidth="71.0" styleClass="activeBtns" stylesheets="@defaultStyles.css" text="Logout" />
-      <Label layoutX="84.0" layoutY="33.0" text="MCQ QUIZ">
+      <Button layoutX="643.0" layoutY="26.0" mnemonicParsing="false" onAction="#clickLogout" prefHeight="27.0" prefWidth="71.0" styleClass="activeBtns" stylesheets="defaultStyles.css" text="Logout" />
+      <Label layoutX="85.0" layoutY="26.0" text="MCQ Quiz Forms">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>
       </Label>
-      <Button layoutX="84.0" layoutY="103.0" mnemonicParsing="false" onAction="#clickDashboard" styleClass="inactiveBtns" text="Dashboard">
+      <Label layoutX="89.0" layoutY="77.0" text="Hi! Welcome Back Student, " />
+      <Label layoutX="247.0" layoutY="77.0" text="{USER}" />
+      <Button layoutX="84.0" layoutY="111.0" mnemonicParsing="false" onAction="#clickDashboard" styleClass="inactiveBtns" text="Dashboard">
          <padding>
             <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
          </padding>
       </Button>
-      <Button layoutX="174.0" layoutY="103.0" mnemonicParsing="false" onAction="#clickViewGrades" styleClass="inactiveBtns" text="View Grades">
+      <Button layoutX="174.0" layoutY="111.0" mnemonicParsing="false" onAction="#clickViewGrades" styleClass="inactiveBtns" text="View Grades">
          <padding>
             <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
          </padding>
       </Button>
-      <Button layoutX="274.0" layoutY="103.0" mnemonicParsing="false" onAction="#clickStudentIssueForm" styleClass="inactiveBtns" text="Issue Form">
+      <Button layoutX="274.0" layoutY="111.0" mnemonicParsing="false" onAction="#clickStudentIssueForm" styleClass="inactiveBtns" text="Issue Form">
          <padding>
             <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
          </padding>
       </Button>
-      <Button layoutX="364.0" layoutY="102.0" mnemonicParsing="false" onAction="#clickEcaForm" styleClass="inactiveBtns" text="ECA Form">
+      <Button layoutX="364.0" layoutY="111.0" mnemonicParsing="false" onAction="#clickEcaForm" styleClass="inactiveBtns" text="ECA Form">
          <padding>
             <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
          </padding>
       </Button>
-      <Button layoutX="447.0" layoutY="102.0" mnemonicParsing="false" styleClass="activeBtns" text="MCQ Quiz">
+      <Button layoutX="447.0" layoutY="111.0" mnemonicParsing="false" styleClass="activeBtns" text="MCQ Quiz">
          <padding>
             <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
          </padding>
       </Button>
-      <Button layoutX="533.0" layoutY="101.0" mnemonicParsing="false" onAction="#clickFeedback" styleClass="inactiveBtns" text="Feedback Form">
+      <Button layoutX="533.0" layoutY="111.0" mnemonicParsing="false" onAction="#clickFeedback" styleClass="inactiveBtns" text="Feedback Form">
          <padding>
             <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
          </padding>
       </Button>
-      <Button layoutX="646.0" layoutY="100.0" mnemonicParsing="false" onAction="#clickIssueFormResponse" styleClass="inactiveBtns" text="Issue Form Response">
+      <Button layoutX="646.0" layoutY="111.0" mnemonicParsing="false" onAction="#clickIssueFormResponse" styleClass="inactiveBtns" text="Issue Form Response">
          <padding>
             <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
          </padding>
       </Button>
-      <Button layoutX="541.0" layoutY="23.0" mnemonicParsing="false" onAction="#clickUpdateStudent" styleClass="inactiveBtns" text="Update Profile">
-         <padding>
-            <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
-         </padding>
-      </Button>
-      <TextField layoutX="86.0" layoutY="160.0" prefHeight="10.0" prefWidth="161.0" promptText="Enter your first name" styleClass="textfields" text="Enter your id" />
-      <TextField layoutX="273.0" layoutY="160.0" prefHeight="25.0" prefWidth="161.0" promptText="Enter your first name" styleClass="textfields" text="Enter your name" />
-      <Label layoutX="89.0" layoutY="141.0" text="Student Id">
+      <TextField layoutX="85.0" layoutY="172.0" prefHeight="10.0" prefWidth="161.0" promptText="Enter your first name" styleClass="textfields" text="Enter your id" />
+      <TextField layoutX="272.0" layoutY="170.0" prefHeight="25.0" prefWidth="161.0" promptText="Enter your first name" styleClass="textfields" text="Enter your name" />
+      <Label layoutX="88.0" layoutY="151.0" text="Student Id">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="279.0" layoutY="141.0" text="Name">
+      <Label layoutX="278.0" layoutY="151.0" text="Name">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <RadioButton layoutX="188.0" layoutY="226.0" mnemonicParsing="false" text="Madrid" />
-      <RadioButton layoutX="89.0" layoutY="226.0" mnemonicParsing="false" text="Berlin" />
-      <Text fontSmoothingType="LCD" layoutX="91.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1. What is the Capital of France ? " />
-      <RadioButton layoutX="287.0" layoutY="226.0" mnemonicParsing="false" text="Paris" />
-      <RadioButton layoutX="387.0" layoutY="226.0" mnemonicParsing="false" text="Rome" />
-      <Line endX="304.3333435058594" layoutX="193.0" layoutY="256.0" startX="-100.0" stroke="#00000049" />
-      <RadioButton layoutX="190.0" layoutY="291.0" mnemonicParsing="false" text="Paris" />
-      <RadioButton layoutX="91.0" layoutY="291.0" mnemonicParsing="false" text="Barcelona" />
-      <Text fontSmoothingType="LCD" layoutX="92.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2. What is the Capital of Germany ? " />
-      <RadioButton layoutX="289.0" layoutY="291.0" mnemonicParsing="false" text="Berlin" />
-      <RadioButton layoutX="389.0" layoutY="291.0" mnemonicParsing="false" text="Munich" />
-      <Line endX="303.3333435058594" layoutX="194.0" layoutY="321.0" startX="-100.0" stroke="#00000049" />
-      <RadioButton layoutX="193.0" layoutY="355.0" mnemonicParsing="false" text="Butwal" />
-      <RadioButton layoutX="94.0" layoutY="355.0" mnemonicParsing="false" text="Bhairahawa" />
-      <Text fontSmoothingType="LCD" layoutX="93.0" layoutY="343.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3. Where is the Birthplace of Buddha ? " />
-      <RadioButton layoutX="291.0" layoutY="355.0" mnemonicParsing="false" text="Lumbini" />
-      <RadioButton layoutX="390.0" layoutY="355.0" mnemonicParsing="false" text="Kathmandu" />
-      <Line endX="304.3333435058594" layoutX="194.0" layoutY="385.0" startX="-100.0" stroke="#00000049" />
-      <RadioButton layoutX="195.0" layoutY="421.0" mnemonicParsing="false" text="RadioButton" />
-      <RadioButton layoutX="96.0" layoutY="421.0" mnemonicParsing="false" text="RadioButton" />
-      <Text fontSmoothingType="LCD" layoutX="96.0" layoutY="409.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4. How do you rate the the overall course experience ? " />
-      <RadioButton layoutX="294.0" layoutY="421.0" mnemonicParsing="false" text="RadioButton" />
-      <RadioButton layoutX="394.0" layoutY="421.0" mnemonicParsing="false" text="RadioButton" />
-      <Line endX="304.3333435058594" layoutX="197.0" layoutY="451.0" startX="-100.0" stroke="#00000049" />
-      <Button layoutX="522.0" layoutY="460.0" mnemonicParsing="false" styleClass="activeBtns" text="Submit">
+      <RadioButton layoutX="187.0" layoutY="236.0" mnemonicParsing="false" text="Madrid" />
+      <RadioButton layoutX="88.0" layoutY="236.0" mnemonicParsing="false" text="Berlin" />
+      <Text fontSmoothingType="LCD" layoutX="88.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1. What is the Capital of France ? " />
+      <RadioButton layoutX="286.0" layoutY="236.0" mnemonicParsing="false" text="Paris" />
+      <RadioButton layoutX="386.0" layoutY="236.0" mnemonicParsing="false" text="Rome" />
+      <Line endX="304.3333435058594" layoutX="192.0" layoutY="266.0" startX="-100.0" stroke="#00000049" />
+      <RadioButton layoutX="189.0" layoutY="301.0" mnemonicParsing="false" text="Paris" />
+      <RadioButton layoutX="88.0" layoutY="301.0" mnemonicParsing="false" text="Barcelona" />
+      <Text fontSmoothingType="LCD" layoutX="88.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2. What is the Capital of Germany ? " />
+      <RadioButton layoutX="288.0" layoutY="301.0" mnemonicParsing="false" text="Berlin" />
+      <RadioButton layoutX="388.0" layoutY="301.0" mnemonicParsing="false" text="Munich" />
+      <Line endX="303.3333435058594" layoutX="193.0" layoutY="331.0" startX="-100.0" stroke="#00000049" />
+      <RadioButton layoutX="192.0" layoutY="365.0" mnemonicParsing="false" text="Butwal" />
+      <RadioButton layoutX="88.0" layoutY="365.0" mnemonicParsing="false" text="Bhairahawa" />
+      <Text fontSmoothingType="LCD" layoutX="92.0" layoutY="353.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3. Where is the Birthplace of Buddha ? " />
+      <RadioButton layoutX="290.0" layoutY="365.0" mnemonicParsing="false" text="Lumbini" />
+      <RadioButton layoutX="389.0" layoutY="365.0" mnemonicParsing="false" text="Kathmandu" />
+      <Line endX="304.3333435058594" layoutX="193.0" layoutY="395.0" startX="-100.0" stroke="#00000049" />
+      <RadioButton layoutX="194.0" layoutY="431.0" mnemonicParsing="false" text="RadioButton" />
+      <RadioButton layoutX="88.0" layoutY="431.0" mnemonicParsing="false" text="RadioButton" />
+      <Text fontSmoothingType="LCD" layoutX="95.0" layoutY="419.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4. How do you rate the the overall course experience ? " />
+      <RadioButton layoutX="293.0" layoutY="431.0" mnemonicParsing="false" text="RadioButton" />
+      <RadioButton layoutX="393.0" layoutY="431.0" mnemonicParsing="false" text="RadioButton" />
+      <Line endX="304.3333435058594" layoutX="196.0" layoutY="461.0" startX="-100.0" stroke="#00000049" />
+      <Button layoutX="453.0" layoutY="480.0" mnemonicParsing="false" prefWidth="141.0" styleClass="activeBtns" text="Submit">
          <padding>
             <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
          </padding>

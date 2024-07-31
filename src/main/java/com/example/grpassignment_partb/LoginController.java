@@ -4,14 +4,14 @@ import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 
 import static com.example.grpassignment_partb.Uses.*;
 
@@ -36,25 +36,50 @@ public class LoginController implements Initializable {
         String role = roleBox.getValue();
 
         errorLabelVisibility(overallError, false);
-        if (roleBox.getValue() == null){
-            error(overallError, "All Fields are required!!");
-        }
-        if (roleBox.getValue() == "Admin"){
-            changeScene(event, "adminDashboard.fxml", "STUDENT MANAGEMENT SYSTEM");
-        } else if (roleBox.getValue() == "Student") {
+
+        if (validateCredentials(email, password, role, "studentsData.csv")) {
+            SessionManager.getInstance().setStudentEmail(email);
             changeScene(event, "studentDashboard.fxml", "STUDENT MANAGEMENT SYSTEM");
-        } else if (roleBox.getValue() == "AdmissionOfficer") {
-            changeScene(event, "admissionOfficerDashboard.fxml", "STUDENT MANAGEMENT SYSTEM");
-        } else if (roleBox.getValue() == "Librarian") {
-            changeScene(event, "librarianDashboard.fxml", "STUDENT MANAGEMENT SYSTEM");
-        } else if (roleBox.getValue() == "Teacher") {
+        }
+        else  if(validateCredentials(email, password, role, "teachersData.csv"))
+        {
             changeScene(event, "teacherDashboard.fxml", "STUDENT MANAGEMENT SYSTEM");
         }
-
-
-        if (email.isEmpty() || password.isEmpty() || role == null) {
-            error(overallError, "All Fields are required!!");
-            return;
+        else  if(validateCredentials(email, password, role, "adminData.csv"))
+        {
+            changeScene(event, "adminDashboard.fxml", "STUDENT MANAGEMENT SYSTEM");
         }
+        else  if(validateCredentials(email, password, role, "staffData.csv"))
+        {
+            if (role.equals("AdmissionOfficer")){
+                changeScene(event, "admissionOfficerDashboard.fxml", "STUDENT MANAGEMENT SYSTEM");
+            } else if (role.equals("Librarian")){
+                changeScene(event, "librarianDashboard.fxml", "STUDENT MANAGEMENT SYSTEM");
+            }
+        }
+        else {
+            error(overallError, "Invalid Login Credentials");
+        }
+
+//        if (roleBox.getValue() == null){
+//            error(overallError, "All Fields are required!!");
+//        }
+//        if (roleBox.getValue() == "Admin"){
+//            changeScene(event, "adminDashboard.fxml", "STUDENT MANAGEMENT SYSTEM");
+//        } else if (roleBox.getValue() == "Student") {
+//            changeScene(event, "studentDashboard.fxml", "STUDENT MANAGEMENT SYSTEM");
+//        } else if (roleBox.getValue() == "AdmissionOfficer") {
+//            changeScene(event, "admissionOfficerDashboard.fxml", "STUDENT MANAGEMENT SYSTEM");
+//        } else if (roleBox.getValue() == "Librarian") {
+//            changeScene(event, "librarianDashboard.fxml", "STUDENT MANAGEMENT SYSTEM");
+//        } else if (roleBox.getValue() == "Teacher") {
+//            changeScene(event, "teacherDashboard.fxml", "STUDENT MANAGEMENT SYSTEM");
+//        }
+//
+//
+//        if (email.isEmpty() || password.isEmpty() || role == null) {
+//            error(overallError, "All Fields are required!!");
+//            return;
+//        }
     }
 }

@@ -1,3 +1,4 @@
-" ",,"","Male","","",""
-" ",,"","Others","","",""
-" ",,"","Female","","",""
+FullName,Faculty,PhoneNumber,Gender,Email,Password
+student student,BCS,3479290,Male,student,264c8c381bf16c982a4e59b0dd4c6f7808c51a05f64c35db42cc78a2a72875bb
+Sarash Chitrakar,BCS,987654321,Male,sarash,703b0a3d6ad75b649a28adde7d83c6251da457549263bc7ff45ec709b0a8448b
+Monish Shrestha,BCS,987654321,Male,monish,67fc5f2f8e21a8a589c49ef4a82de93437d581886c993ef1c3cbe52ab603aba2

@@ -15,27 +15,34 @@ import java.util.List;
 import static com.example.grpassignment_partb.Uses.changeScene;
 
 public class ManageStaffs {
-
     @FXML
     private TableView<StaffDataModel> tableView;
     @FXML
-    private TableColumn<StaffDataModel, String> column1;
+    private TableColumn<StaffDataModel, String> fullName;
     @FXML
-    private TableColumn<StaffDataModel, String> column2;
+    private TableColumn<StaffDataModel, String> department;
     @FXML
-    private TableColumn<StaffDataModel, String> column3;
+    private TableColumn<StaffDataModel, String> role;
     @FXML
-    private TableColumn<StaffDataModel, String> column4;
+    private TableColumn<StaffDataModel, String> phoneNumber;
+    @FXML
+    private TableColumn<StaffDataModel, String> gender;
+    @FXML
+    private TableColumn<StaffDataModel, String> email;
+    @FXML
+    private TableColumn<StaffDataModel, String> password;
 
     private ObservableList<StaffDataModel> data;
-
     @FXML
     public void initialize() {
         data = FXCollections.observableArrayList();
-        column1.setCellValueFactory(cellData -> cellData.getValue().column1Property());
-        column2.setCellValueFactory(cellData -> cellData.getValue().column2Property());
-        column3.setCellValueFactory(cellData -> cellData.getValue().column3Property());
-        column4.setCellValueFactory(cellData -> cellData.getValue().column4Property());
+        fullName.setCellValueFactory(cellData -> cellData.getValue().staffFullNameProperty());
+        department.setCellValueFactory(cellData -> cellData.getValue().staffDepartmentProperty());
+        role.setCellValueFactory(cellData -> cellData.getValue().staffRoleProperty());
+        phoneNumber.setCellValueFactory(cellData -> cellData.getValue().staffPhoneNumberProperty());
+        gender.setCellValueFactory(cellData -> cellData.getValue().staffGenderProperty());
+        email.setCellValueFactory(cellData -> cellData.getValue().staffEmailProperty());
+        password.setCellValueFactory(cellData -> cellData.getValue().staffPasswordProperty());
 
         tableView.setItems(data);
         loadCSVData("staffData.csv");
@@ -50,15 +57,11 @@ public class ManageStaffs {
                     headerSkipped = true;
                     continue;  // Skip the header row
                 }
-                data.add(new StaffDataModel(row[0], row[1], row[2], row[3]));
+                data.add(new StaffDataModel(row[0], row[1], row[2], row[3], row[4], row[5], row[6]));
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-    @FXML
-    private void handleLoadCSVButtonAction() {
-        loadCSVData("staffData.csv");
     }
 
 

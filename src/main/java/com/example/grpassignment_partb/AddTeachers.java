@@ -35,6 +35,8 @@ public class AddTeachers implements Initializable {
     private PasswordField passwordBox;
     @FXML
     private PasswordField confirmPasswordBox;
+    @FXML
+    private Label messageLabel;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         selectFaculty.setItems(FXCollections.observableArrayList("BCS", "BBA", "BCA", "BIHM", "BBS"));
@@ -51,10 +53,32 @@ public class AddTeachers implements Initializable {
         String password = passwordBox.getText();
         String confirmPassword = confirmPasswordBox.getText();
 
+        errorLabelVisibility(messageLabel, false);
+
         String fullName = firstName + " " + lastName;
 
-        String[] values = {fullName, faculty, phoneNumber, gender, email, password, confirmPassword};
-        saveDatatoCSV("teachersData.csv", values);
+        String encryptedPassword;
+
+        if (firstNameBox.getText().isEmpty() || lastNameBox.getText().isEmpty() || selectFaculty.getValue() == null || phoneNumberBox.getText().isEmpty() || gender == null || emailBox.getText().isEmpty() || passwordBox.getText().isEmpty() || confirmPasswordBox.getText().isEmpty()) {
+            error(messageLabel, "All above fields are required!!");
+        } else if (!password.equals(confirmPassword)) {
+            error(messageLabel, "Passwords don't match!!");
+        } else if (!isEmailUnique(email, "teachersData.csv", 4)) {
+            error(messageLabel, "Email already exists!!");
+        } else if (password.length() < 6) {
+            error(messageLabel, "Password must contain atleast 6 characters!!");
+        } else {
+            encryptedPassword = encryptPassword(password);
+            String[] headers = {"FullName", "Faculty", "PhoneNumber", "Gender", "Email", "Password"};
+            String[] values = {fullName, faculty, phoneNumber,gender, email, encryptedPassword};
+
+            try{
+                saveDatatoCSV("teachersData.csv", headers, values);
+                success(messageLabel, "Added Succesfully!!");
+            } catch (IOException e){
+                e.printStackTrace();
+            }
+        }
     }
 
     @FXML

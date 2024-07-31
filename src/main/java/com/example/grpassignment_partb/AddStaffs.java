@@ -37,6 +37,8 @@ public class AddStaffs implements Initializable {
     private PasswordField passwordBox;
     @FXML
     private PasswordField confirmPasswordBox;
+    @FXML
+    private Label messageLabel;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -56,11 +58,32 @@ public class AddStaffs implements Initializable {
         String password = passwordBox.getText();
         String confirmPassword = confirmPasswordBox.getText();
 
+        errorLabelVisibility(messageLabel, false);
+
         String fullName = firstName + " "+ lastName;
 
-        String[] values = {fullName, department, role, phoneNumber,gender, email, password, confirmPassword};
-        saveDatatoCSV("staffData.csv", values);
+        String encryptedPassword;
 
+        if (firstNameBox.getText().isEmpty() || lastNameBox.getText().isEmpty() || selectDepartmentBox.getValue() == null || selectRoleBox.getValue() == null || phoneNumberBox.getText().isEmpty() || gender == null || emailBox.getText().isEmpty() || passwordBox.getText().isEmpty() || confirmPasswordBox.getText().isEmpty()) {
+            error(messageLabel, "All above fields are required!!");
+        } else if (!password.equals(confirmPassword)) {
+            error(messageLabel, "Passwords don't match!!");
+        } else if (!isEmailUnique(email, "staffData.csv", 5)) {
+            error(messageLabel, "Email already exists!!");
+        } else if (password.length() < 6) {
+            error(messageLabel, "Password must contain atleast 6 characters!!");
+        } else {
+            encryptedPassword = encryptPassword(password);
+            String[] headers = {"FullName", "Department", "Role", "PhoneNumber", "Gender", "Email", "Password"};
+            String[] values = {fullName, department, role, phoneNumber,gender, email, encryptedPassword};
+
+            try{
+                saveDatatoCSV("staffData.csv", headers, values);
+                success(messageLabel, "Added Succesfully!!");
+            } catch (IOException e){
+                e.printStackTrace();
+            }
+        }
     }
 
 

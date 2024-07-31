@@ -76,35 +76,37 @@
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="100.0" layoutY="213.0" text="1">
+      <Label fx:id="adminCount" layoutX="100.0" layoutY="213.0" text="1">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="263.0" layoutY="213.0" text="25">
+      <Label fx:id="staffCount" layoutX="263.0" layoutY="213.0" text="25">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="423.0" layoutY="213.0" text="200">
+      <Label fx:id="studentCount" layoutX="423.0" layoutY="213.0" text="200">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="584.0" layoutY="213.0" text="30">
+      <Label fx:id="teacherCount" layoutX="584.0" layoutY="213.0" text="30">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
       <Label layoutX="81.0" layoutY="275.0" text="Current Admins:" />
-      <TableView layoutX="81.0" layoutY="310.0" prefHeight="212.0" prefWidth="640.0">
-        <columns>
-          <TableColumn minWidth="160.0" prefWidth="129.0" text="Username" />
-          <TableColumn minWidth="160.0" prefWidth="109.0" text="Full Name" />
-            <TableColumn minWidth="160.0" prefWidth="75.0" text="Role" />
-            <TableColumn minWidth="160.0" prefWidth="75.0" text="Actions" />
-        </columns>
+      <TableView fx:id="tableView" layoutX="81.0" layoutY="310.0" prefHeight="212.0" prefWidth="640.0">
+         <columns>
+            <TableColumn fx:id="fullName" minWidth="128.0" prefWidth="75.0" text="FullName" />
+            <TableColumn fx:id="gender" minWidth="128.0" prefWidth="75.0" text="Gender" />
+            <TableColumn fx:id="phoneNumber" minWidth="128.0" prefWidth="75.0" text="PhoneNumber" />
+            <TableColumn fx:id="email" minWidth="128.0" prefWidth="75.0" text="Email" />
+            <TableColumn fx:id="password" minWidth="128.0" prefWidth="75.0" text="Password" />
+         </columns>
       </TableView>
+      <Button layoutX="664.0" layoutY="271.0" mnemonicParsing="false" styleClass="inactiveBtns" text="Delete" />
    </children>
    <stylesheets>
       <URL value="@adminDashboard.css" />

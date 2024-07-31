@@ -31,7 +31,7 @@ public class AddAdmin implements Initializable {
     @FXML
     private PasswordField confirmPasswordBox;
     @FXML
-    private Label errorLabel;
+    private Label messageLabel;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -48,16 +48,31 @@ public class AddAdmin implements Initializable {
         String password = passwordBox.getText();
         String confirmPassword = confirmPasswordBox.getText();
 
-        errorLabelVisibility(errorLabel, false);
+        errorLabelVisibility(messageLabel, false);
 
         String fullName = firstName + " "+ lastName;
+        String encryptedPassword;
 
-        if (firstName.isEmpty() || lastName.isEmpty() || gender.isEmpty() || phoneNumber.isEmpty() || email.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()){
-            error(errorLabel, "All above fields are required!!");
+        if (firstNameBox.getText().isEmpty() || lastNameBox.getText().isEmpty() || genderBox.getValue() == null || phoneNumberBox.getText().isEmpty() || emailBox.getText().isEmpty() || passwordBox.getText().isEmpty() || confirmPasswordBox.getText().isEmpty()) {
+            error(messageLabel, "All above fields are required!!");
+        } else if (!password.equals(confirmPassword)) {
+            error(messageLabel, "Passwords don't match!!");
+        } else if (!isEmailUnique(email, "adminData.csv", 3)) {
+            error(messageLabel, "Email already exists!!");
+        } else if (password.length() < 6) {
+            error(messageLabel, "Password must contain atleast 6 characters!!");
         } else {
-            String[] values = {fullName, gender, phoneNumber, email, password, confirmPassword};
-            saveDatatoCSV("adminData.csv", values);
-            success(errorLabel, "Added Successfully!!");
+            encryptedPassword = encryptPassword(password);
+
+            String[] headers = {"FullName", "Gender", "PhoneNumber", "Email", "Password"};
+            String[] values = {fullName, gender, phoneNumber, email, encryptedPassword};
+
+            try {
+                saveDatatoCSV("adminData.csv", headers, values);
+                success(messageLabel, "Added Successfully!!");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
     @FXML

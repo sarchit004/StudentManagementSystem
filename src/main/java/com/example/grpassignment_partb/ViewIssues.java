@@ -14,29 +14,31 @@ import java.util.List;
 
 import static com.example.grpassignment_partb.Uses.changeScene;
 
-public class ManageLibrary {
+public class ViewIssues {
     @FXML
-    private TableView<LibraryDataModel> tableView;
+    private TableView<IssueDataModel> tableView;
     @FXML
-    private TableColumn<LibraryDataModel, String> bookID;
+    private TableColumn<IssueDataModel, String> emailID;
     @FXML
-    private TableColumn<LibraryDataModel, String> bookTitle;
+    private TableColumn<IssueDataModel, String> dateReported;
     @FXML
-    private TableColumn<LibraryDataModel, String> bookAuthor;
+    private TableColumn<IssueDataModel, String> problemCategory;
+    @FXML
+    private TableColumn<IssueDataModel, String> issueDescription;
 
-    private ObservableList<LibraryDataModel> data;
+    private ObservableList<IssueDataModel> data;
 
     @FXML
     public void initialize() {
         data = FXCollections.observableArrayList();
-        bookID.setCellValueFactory(cellData -> cellData.getValue().bookIDProperty());
-        bookTitle.setCellValueFactory(cellData -> cellData.getValue().bookTitleProperty());
-        bookAuthor.setCellValueFactory(cellData -> cellData.getValue().bookAuthorProperty());
+        emailID.setCellValueFactory(cellData -> cellData.getValue().issueEmailIDProperty());
+        dateReported.setCellValueFactory(cellData -> cellData.getValue().issueDateReportedProperty());
+        problemCategory.setCellValueFactory(cellData -> cellData.getValue().issueProblemCategoryProperty());
+        issueDescription.setCellValueFactory(cellData -> cellData.getValue().issueDescriptionProperty());
 
         tableView.setItems(data);
-        loadCSVData("bookData.csv");
+        loadCSVData("issuesData.csv");
     }
-
     private void loadCSVData(String filePath) {
         try (CSVReader csvReader = new CSVReader(new FileReader(filePath))) {
             List<String[]> csvData = csvReader.readAll();
@@ -46,7 +48,7 @@ public class ManageLibrary {
                     headerSkipped = true;
                     continue;  // Skip the header row
                 }
-                data.add(new LibraryDataModel(row[0], row[1], row[2]));
+                data.add(new IssueDataModel(row[0], row[1], row[2], row[3]));
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -57,12 +59,20 @@ public class ManageLibrary {
     public void clickLogout(ActionEvent event) throws IOException {
         changeScene(event, "login.fxml", "STUDENT MANAGEMENT SYSTEM");
     }
+
     @FXML
     public void clickDashboard(ActionEvent event) throws IOException {
-        changeScene(event, "librarianDashboard.fxml", "STUDENT MANAGEMENT SYSTEM");
+        changeScene(event, "teacherDashboard.fxml", "STUDENT MANAGEMNENT SYSTEM");
     }
+
     @FXML
-    public void clickAddStudents(ActionEvent event) throws IOException {
-        changeScene(event, "addBooks.fxml", "STUDENT MANAGEMENT SYSTEM");
+    public void clickAssignGrades(ActionEvent event) throws IOException {
+        changeScene(event, "AssignGrades.fxml", "STUDENT MANAGEMENT SYSTEM");
     }
+
+    @FXML
+    public void clickECAformResponse(ActionEvent event) throws IOException {
+        changeScene(event, "teacherECAResponses.fxml", "STUDENT MANAGEMENT SYSTEM");
+    }
+
 }
